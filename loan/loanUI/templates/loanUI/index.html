@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laon Prediction</title>
+    <style>
+        body{
+        margin:auto;
+        padding-top:20px;
+        height:300px;
+        width:500px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="background:#008B8B;text-align:center;font-size:2em;padding-top:0.3px;padding-bottom:0.3px">
+<p><b>Loan Prediction Application</b></p>
+</div>
+<div class="container" style="background:#BDB76B;text-align:center;font-size:1em;padding-top:30px;padding-bottom:20px">
+<form action="{% url 'detail'  %}" method="post">
+    {% csrf_token %}
+    <input type="radio" id="choice1" name="choice" value="1" >
+    <label for ="choice1">
+        <b>Check Eligibility for Loan </b>
+    </label><br>
+    <input type="radio" id="choice2" name="choice" value="2" >
+    <label for ="choice2">
+        <b>Predict the Loan Amount</b>
+    </label><br><br>
+<input type="submit" value="Predict" name="submit" style="border-radius:5px;font-size:15px">
+</form>
+
+</div>
+
+</body>
+</html>
