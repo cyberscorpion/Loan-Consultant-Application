@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laon Prediction</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body{
+        margin:auto;
+        padding-top:30px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="background:#008B8B;text-align:center;font-size:2em;padding-top:0.3px;padding-bottom:0.3px;width:40%">
+<p><b>Loan Prediction Application</b></p>
+</div>
+<div class="container" style="background:#BDB76B;font-size:1em;padding-top:30px;padding-bottom:20px;width:40%">
+    <div class="row">
+        <div class="col-sm-7">
+            <form action="{% url 'predict2'  %}" method="post">
+              {% csrf_token %}
+                <div class="form-group">
+                <label for="text2">Enter your income:</label>
+                    <input type="number" class="form-control" id="text2" placeholder="income..." name="text2" required>
+                 </div>
+                    <input type="submit" class="btn btn-primary" value="Predict" name="submit" style="border-radius:5px;font-size:15px">
+             </form>
+
+         </div>
+    </div>
+</div>
+
+
+</body>
+</html>
